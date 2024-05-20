@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fitur yang ditawarkan pada JQUERY</h1>
+    <ul class="lokasi">
+        <li class="bandung">Bandung
+
+            <button id="keBandung">Pergi ke Bandung</button>
+            <button id="hideBandung">H</button>
+            <button id="pulangKeBandung">X</button>
+        </li>
+        <li class="surabaya"><strong>Surabaya</strong></li>
+        <li>Jakarta</li>
+        <li><input type="text" class="inputan" value="Malang"></li>
+    </ul>
+    <button id="toggleKota">Ini toogleKota</button>
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function (){
+    $('#keBandung').on('click',function(){
+        alert('saya suka ke bandung')
+    })
+    $('#pulangKeBandung').on('click',function(){
+        $('.bandung').remove()
+        alert('List Bandung di hapus dalam trip')
+    })
+    $('#hideBandung').on('click',function(){
+        // $('.bandung').hide() // untuk menyembukian
+        // $('.bandung').fadeOut(1000)
+        // $('.bandung').slideUp(2000)
+    })
+    $('#toggleKota').on('click',function(){
+        // $('.bandung').toggle()
+        $('.bandung').animate({
+            marginLeft:200
+        })
+    })
+})  
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Memanipulasi D0M di JQUEY -->
+    <!-- Selain dapat berjalan-jalan dengan traversing, kita dapat memanipulasi DOM menggunakan fungsi di bawah ini :
+
+Add
+Ada beberapa pilihan untuk manipulasi dengan fungsi add antara lain :
+
+.before(<elemen>)
+Digunakan untuk menyisipkan konten tertentu sebelum elemen yang dipilih.
+
+**Contoh **
+
+Kita mempunyai DOM seperti di bawah ini : -->
+<!-- <li class="vacation">
+    <h2>Hawai vacation</h2>
+    <button>Get Price</button>
+</li> -->
+
+<!-- contoh penggunaan dari GET
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+	<li>Bandung</li>
+	<li class="surabaya"><strong>Surabaya</strong></li>
+	<li>Jakarta</li>
+    <li><input type="text" class="inputan" value="Malang"></li>
+</ul> -->
+
+<h1>Contoh penggunaan dari SET?</h1>
+<ul class="lokasi">
+	<li class="bandung">Bandung</li>
+	<li class="surabaya"><strong>Surabaya</strong></li>
+	<li>Jakarta</li>
+	<li><input type="text" class="inputan" value="Malang"></li>
+</ul>
+<script src="jquery-3.7.1.js"></script>
+
+<script>
+    // $(document).ready(function(){
+    //     //contoh penggunaan dari Before
+    //     const price = $('<p> From $399.99</p>')
+        // $('.vacation').before(price)
+        
+        //contoh penggunaan afternya
+        // $('.vacation').after(price)
+       
+        //contoh penggunaan.prepend
+        // $('.vacation').prepend(price)
+
+        //Ccontoh penggunaan  dari .append()
+        // $('.vacation').append(price)
+
+//         Alternatif
+// Fungsinya sama seperi add hanya saja susunan pemakainnya berbeda.
+// .insertBefore(<elemen>)
+// Fungsinya sama seperti before, digunakan untuk menyisipkan konten / elemen HTML sebelum elemen yang dipilih.
+// price.insertBefore($('.vacation'));
+// price.insertAfter($('.vacation'));
+// price.prependTo($('.vacation'));
+// price.appendTo($('.vacation'));
+// //CONTOH PENGGUNAANNYA
+// var jogja=$('<li>Yogyakarta</li>');
+//     var bali=$('<li>Bali</li>');
+//     var subjudul=$('<h2>Pilih Tujuan Anda</h2>');
+//     var penutup=$('<h3>Terima Kasih</h3>');
+// 	jogja.prependTo($('.lokasi'));
+// 	bali.appendto($('.lokasi'));	
+// 	subjudul.insertBefore($('.lokasi'));	
+// 	penutup.insertAfter($('.lokasi'));
+ 
+//  })
+
+// $(document).ready(function()
+// {
+//     // GET
+// // Digunakan untuk mengambil data elemen di jQuery.
+// // .text
+// // Mengembalikan konten teks dari elemen yang dipilih. Metode ini mengembalikan semua elemen yang cocok
+// // dan
+// // menghapus markup HTML.
+// // console.log($('.surabaya').text());
+
+// // // .html
+// // // Mengembalikan konten elemen yang dipilih (termasuk markup HTML).
+// // console.log($('.surabaya').html());
+
+// // .val
+// // Mengembalikan value pada form.
+
+// console.log($('.inputan').val());
+// });
+
+// SET
+// .text(konten)
+// Mengatur konten teks dari elemen yang dipilih.
+
+// .html(konten)
+// Mengatur konten elemen yang dipilih (markup HTML).
+
+// .val(konten)
+// Menetapkan atau mengembalikan value pada form.
+$(document).ready(function()
+{
+    // $('.bandung').text('Cimahi');
+    // $('.surabaya').html('<em>Surabaya</em>');
+    // $('.inputan').val('Semarang');
+
+// Remove
+// Digunakan untuk mengambil data di jQuery.
+
+// .remove()
+// Menghapus elemen dan elemen didalamnya (child)
+
+// .empty()
+// Menghapus elemen di dalamnya saja (child)
+$('.bandung').remove();
+$('.surabaya').empty();
+
+});
+</script>
+</body>
+</html>

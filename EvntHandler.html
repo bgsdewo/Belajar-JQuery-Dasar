@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contoh penggunaan dari SET?</h1>
+    <ul class="lokasi">
+        <li class="bandung">Bandung
+
+            <button id="keBandung">Pergi ke Bandung</button>
+            <button id="pulangKeBandung">Hapus ke Bandung</button>
+        </li>
+        <li class="surabaya"><strong>Surabaya</strong></li>
+        <li>Jakarta</li>
+        <li><input type="text" class="inputan" value="Malang"></li>
+    </ul>
+
+
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        
+// Pengertian Event Handler
+// Semua tindakan pengguna yang berbeda dimana dapat ditanggapi oleh Javascript / jQuery disebut event.
+
+// Contoh
+
+// 1.Menggerakkan mouse di atas elemen
+// 2.Memilih tombol radio
+// 3.Mengklik elemen
+
+// Macam Event Handler
+// Berikut macam event handler yang dapat kita gunakan sesuai kebutuhan.
+
+// | Mouse Events | Keyboard Events | Form Events | Document/Window Events | |
+
+$(document).ready(function (){
+    $('#keBandung').on('click',function(){
+        alert('saya suka ke bandung')
+    })
+    $('#pulangKeBandung').on('click',function(){
+        $('.bandung').remove()
+        alert('List Bandung di hapus dalam trip')
+    })
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Halo selamat datang</h1>    
+    <!-- VIDEO,Menggunakan JQUERY SELEKTOR  -->
+    <!-- <ul>
+
+        <li class="city">Jakarta</li>
+        <li>Bandung</li>
+        <li>Surabaya</li>
+    </ul> -->
+
+    <!-- video,Menggunakan CSS Pseudoclass
+jQuery Selector - Pseudoclass -->
+<!-- Latihan yang ke 1  -->
+<ul id="destinations">
+	<li>Bandung</li>
+	<li>Jakarta</li>
+		<ul>
+			<li>Jakarta Pusat</li>
+			<li>Jakarta Utara</li>
+			<li>Jakarta Selatan</li>
+			<li>Jakarta Barat</li>
+			<li>Jakarta Timur</li>
+		</ul>
+        
+	<li>Surabaya</li>
+	<li>Bali</li>
+</ul>
+<button>Aksi</button>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        //jalankan disni karena  JavaScript (dan jQuery) dapat berjalan sebelum DOM "siap" , maka kita jalankan (listen) kode jQuery
+    
+        // $(document).ready(function(){
+        //     console.log('Sudah siap')
+        //     $('li').text('indonesia')
+        //     $('.city').text('Meikarta')
+        // })
+
+
+
+        // Bekerja dengan DOM di JQuery
+        // Latihan yg ke 1 
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#destinations li").css("background-color", "yellow");
+                })
+            })
+
+            // Selain itu kita juga bisa hanya mencari elemen anak atau child <li>
+                //  di dalam object yang memiliki id = destinations, kita bisa tuliskan seperti di bawah ini :
+                $(document).ready(function(){
+                $("button").click(function(){
+                    $("#destinations > li").css("background-color", "yellow");
+                })
+            })
+
+    //Mencari elemen lebih dari satu
+    // Untuk mencari elemen lebih dari satu, kita dapat memakai koma seperti di bawah ini :
+    // $(".promo, #france")
+// Memilih elemen pertama atau elemen terakhir
+// Untuk memilih elemen pertama :
+// $("#destinations li:first");
+// Untuk memilih elemen terakhir :  
+// $("#destinations li:last");
+// **Memilih elemen ganjil atau genap **
+// Untuk memilih elemen ganjil dan genap, index dimulai dari 0 bukan dari 1.
+// Untuk memilih elemen ganjil :
+// $("#destinations li:odd");
+// Untuk memilih elemen genap :
+// $("#destinations li:even");
+// Menggunakan fungsi Traversing
+// Digunakan untuk menjelajah DOM dengan menggunakan fungsi-fungi berikut ini :
+
+// .first()
+
+// Memilih elemen pertama dari elemen yang dipilih
+
+// .last()
+
+// Memilih elemen terakhir dari elemen yang dipilih
+
+// .prev()
+
+// Memilih elemen sebelumnya dari elemen yang dipilih
+
+// .next()
+
+// Memilih elemen berikutnya dari elemen yang dipilih
+
+// .children()
+
+// Memilih elemen anak dari elemen yang dipilih
+
+// .find()
+
+// Memilih elemen anak dan juga elemen-elemen di bawahnya dari elemen yang dipilih
+
+// .parent()
+
+// Memilih elemen parent dari elemen yang dipilih
+// $("li").first().next().prev().last();
+       </script>
+
+</body>
+</html>
